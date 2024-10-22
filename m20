@@ -1,0 +1,19 @@
+let horaInicio = parseInt(prompt("Digite a hora de início (0 a 23):"));
+let minutoInicio = parseInt(prompt("Digite os minutos de início (0 a 59):"));
+
+let horaFim = parseInt(prompt("Digite a hora de término (0 a 23):"));
+let minutoFim = parseInt(prompt("Digite os minutos de término (0 a 59):"));
+
+let totalMinutosInicio = horaInicio * 60 + minutoInicio;
+let totalMinutosFim = horaFim * 60 + minutoFim;
+
+// Se o jogo terminar no dia seguinte
+if (totalMinutosFim < totalMinutosInicio) {
+    totalMinutosFim += 24 * 60; // Adiciona 24 horas em minutos
+}
+
+let duracaoMinutos = totalMinutosFim - totalMinutosInicio;
+let horasDuracao = Math.floor(duracaoMinutos / 60);
+let minutosDuracao = duracaoMinutos % 60;
+
+alert("Duração do jogo: " + horasDuracao + " horas e " + minutosDuracao + " minutos");
