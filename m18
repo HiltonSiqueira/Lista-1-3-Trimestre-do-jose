@@ -1,0 +1,23 @@
+let valor = parseInt(prompt("Digite um valor em reais:"));
+
+let notas100 = Math.floor(valor / 100);
+valor %= 100;
+
+let notas50 = Math.floor(valor / 50);
+valor %= 50;
+
+let notas10 = Math.floor(valor / 10);
+valor %= 10;
+
+let notas5 = Math.floor(valor / 5);
+valor %= 5;
+
+let notas1 = valor;
+
+alert("Notas necessárias:\n" +
+      "Notas de 100: " + notas100 + "\n" +
+      "Notas de 50: " + notas50 + "\n" +
+      "Notas de 10: " + notas10 + "\n" +
+      "Notas de 5: " + notas5 + "\n" +
+      "Notas de 1: " + notas1);
+31
