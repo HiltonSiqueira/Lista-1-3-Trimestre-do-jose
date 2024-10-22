@@ -1,0 +1,19 @@
+let preco = {
+    'ABCD': 5.30,
+    'XYPK': 6.00,
+    'KLMP': 3.20,
+    'QRST': 2.50
+};
+
+let codigoProduto = prompt("Digite o código do produto:");
+let quantidade = parseInt(prompt("Digite a quantidade comprada:"));
+let total = 0;
+
+if (preco[codigoProduto]) {
+    total = preco[codigoProduto] * quantidade;
+    alert("Preço total: R$ " + total.toFixed(2));
+} else {
+    alert("Código do produto inválido.");
+}
+5
+
