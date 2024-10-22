@@ -5,7 +5,7 @@ let nota3 = parseFloat(prompt("Digite a Nota 3:"));
 let mediaExercicios = parseFloat(prompt("Digite a média dos exercícios:"));
 
 let mediaAproveitamento = (nota1 + nota2 * 2 + nota3 * 3 + mediaExercicios) / 7;
-let conceito;
+let conceito = '';
 
 if (mediaAproveitamento >= 9.0) {
     conceito = 'A';
@@ -19,4 +19,11 @@ if (mediaAproveitamento >= 9.0) {
     conceito = 'E';
 }
 
-alert("Média de Aproveitamento: " + mediaAproveitamento.toFixed(2) + "\nConceito: " + conceito);
+let situacao = (conceito === 'A' || conceito === 'B' || conceito === 'C') ? "APROVADO" : "REPROVADO";
+
+alert("Número do Aluno: " + id +
+      "\nNotas: " + nota1 + ", " + nota2 + ", " + nota3 +
+      "\nMédia dos Exercícios: " + mediaExercicios.toFixed(2) +
+      "\nMédia de Aproveitamento: " + mediaAproveitamento.toFixed(2) +
+      "\nConceito: " + conceito +
+      "\nSituação: " + situacao);
