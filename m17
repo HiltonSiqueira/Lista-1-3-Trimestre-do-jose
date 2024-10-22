@@ -1,0 +1,21 @@
+let i = parseInt(prompt("Digite um valor inteiro (1, 2 ou 3):"));
+let a = parseFloat(prompt("Digite o valor de a:"));
+let b = parseFloat(prompt("Digite o valor de b:"));
+let c = parseFloat(prompt("Digite o valor de c:"));
+
+if (i === 1) {
+    let valores = [a, b, c];
+    valores.sort((x, y) => x - y);
+    alert("Valores em ordem crescente: " + valores.join(", "));
+} else if (i === 2) {
+    let valores = [a, b, c];
+    valores.sort((x, y) => y - x);
+    alert("Valores em ordem decrescente: " + valores.join(", "));
+} else if (i === 3) {
+    let maior = Math.max(a, b, c);
+    let restantes = [a, b, c].filter(x => x !== maior);
+    alert("Valores com o maior entre os dois: " + restantes[0] + ", " + maior + ", " + restantes[1]);
+} else {
+    alert("Valor de i inválido.");
+}
+2
