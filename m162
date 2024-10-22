@@ -1,4 +1,4 @@
-let horaInicio = parseInt(prompt("Digite a hora de início do jogo:"));
+,let horaInicio = parseInt(prompt("Digite a hora de início do jogo:"));
 let horaFim = parseInt(prompt("Digite a hora de fim do jogo:"));
 
 let duracao;
