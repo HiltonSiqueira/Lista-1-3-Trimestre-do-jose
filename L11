@@ -1,0 +1,21 @@
+let nota1 = parseFloat(prompt("Digite a primeira nota:"));
+let nota2 = parseFloat(prompt("Digite a segunda nota:"));
+let nota3 = parseFloat(prompt("Digite a terceira nota:"));
+let opcao = parseInt(prompt("Escolha o tipo de média:\n1 - Aritmética\n2 - Ponderada (3, 3, 4)\n3 - Harmônica"));
+
+let media;
+
+if (opcao === 1) {
+    media = (nota1 + nota2 + nota3) / 3;
+} else if (opcao === 2) {
+    media = (nota1 * 3 + nota2 * 3 + nota3 * 4) / (3 + 3 + 4);
+} else if (opcao === 3) {
+    media = 3 / ((1 / nota1) + (1 / nota2) + (1 / nota3));
+} else {
+    alert("Opção inválida.");
+}
+
+if (media !== undefined) {
+    alert("A média calculada é: " + media.toFixed(2));
+}
+2
