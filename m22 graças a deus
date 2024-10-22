@@ -1,0 +1,15 @@
+let indicePoluicao = parseFloat(prompt("Digite o índice de poluição medido:"));
+
+if (indicePoluicao < 0.05 || indicePoluicao > 0.25) {
+    if (indicePoluicao >= 0.3 && indicePoluicao < 0.4) {
+        alert("Indústrias do 1º grupo: Suspender atividades.");
+    } else if (indicePoluicao >= 0.4 && indicePoluicao < 0.5) {
+        alert("Indústrias do 1º e 2º grupo: Suspender atividades.");
+    } else if (indicePoluicao >= 0.5) {
+        alert("Indústrias do 1º, 2º e 3º grupo: Suspender atividades.");
+    } else {
+        alert("Índice dentro do limite aceitável.");
+    }
+} else {
+    alert("Índice dentro do limite aceitável.");
+}
