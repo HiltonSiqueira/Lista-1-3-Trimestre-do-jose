@@ -1,0 +1,29 @@
+let codigoAluno = 123;
+let nota1 = 7;
+let nota2 = 5;
+let nota3 = 8;
+
+let maiorNota = Math.max(nota1, nota2, nota3);
+let somaPesos = 0;
+let somaNotas = 0;
+
+if (maiorNota === nota1) {
+    somaNotas = nota1 * 4 + nota2 * 3 + nota3 * 3;
+} else if (maiorNota === nota2) {
+    somaNotas = nota2 * 4 + nota1 * 3 + nota3 * 3;
+} else {
+    somaNotas = nota3 * 4 + nota1 * 3 + nota2 * 3;
+}
+
+somaPesos = 4 + 3 + 3;
+let media = somaNotas / somaPesos;
+
+console.log("Código do aluno:", codigoAluno);
+console.log("Notas:", nota1, nota2, nota3);
+console.log("Média:", media.toFixed(2));
+
+if (media >= 5) {
+    console.log("APROVADO");
+} else {
+    console.log("REPROVADO");
+}
