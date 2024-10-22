@@ -1,6 +1,21 @@
-Código      Cargo       Percentual
-101        Gerente         10%
-102       Engenheiro       20%
-103        Técnico         30%
+let salario = parseFloat(prompt("Digite o salário do funcionário:"));
+let cargo = parseInt(prompt("Digite o código do cargo (101 - Gerente, 102 - Engenheiro, 103 - Técnico):"));
+let percentual;
 
-1
+if (cargo === 101) {
+    percentual = 0.10;
+} else if (cargo === 102) {
+    percentual = 0.20;
+} else if (cargo === 103) {
+    percentual = 0.30;
+} else {
+    percentual = 0.40;
+}
+
+let aumento = salario * percentual;
+let novoSalario = salario + aumento;
+let diferenca = novoSalario - salario;
+
+alert("Salário antigo: R$ " + salario.toFixed(2) +
+      "\nNovo salário: R$ " + novoSalario.toFixed(2) +
+      "\nDiferença: R$ " + diferenca.toFixed(2));
