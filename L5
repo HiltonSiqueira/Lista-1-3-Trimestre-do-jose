@@ -1,0 +1,14 @@
+let num1 = 4;
+let num2 = 7;
+let num3 = 2;
+
+let maior = num1;
+
+if (num2 > maior) {
+    maior = num2;
+}
+if (num3 > maior) {
+    maior = num3;
+}
+
+console.log("O maior número é:", maior);
