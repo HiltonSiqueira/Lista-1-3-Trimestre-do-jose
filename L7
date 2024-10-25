@@ -1,15 +1,22 @@
-let numero = -3;
+let numero = parseInt(prompt("Digite um número:"));
 
 if (numero > 0) {
     console.log("O número é positivo.");
-} else if (numero < 0) {
+}
+
+if (numero < 0) {
     console.log("O número é negativo.");
-} else {
+}
+
+if (numero === 0) {
     console.log("O número é zero.");
 }
 
 if (numero % 2 === 0) {
     console.log("O número é par.");
-} else {
+}
+
+if (numero % 2 !== 0) {
     console.log("O número é ímpar.");
 }
+
