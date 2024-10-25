@@ -13,8 +13,8 @@ let total = 0;
 if (preco[codigoProduto]) {
     total = preco[codigoProduto] * quantidade;
     alert("Preço total: R$ " + total.toFixed(2));
-} else {
+}
+
+if (!preco[codigoProduto]) {
     alert("Código do produto inválido.");
 }
-52
-
