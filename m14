@@ -4,11 +4,17 @@ let percentual;
 
 if (cargo === 101) {
     percentual = 0.10;
-} else if (cargo === 102) {
+}
+
+if (cargo === 102) {
     percentual = 0.20;
-} else if (cargo === 103) {
+}
+
+if (cargo === 103) {
     percentual = 0.30;
-} else {
+}
+
+if (cargo !== 101 && cargo !== 102 && cargo !== 103) {
     percentual = 0.40;
 }
 
