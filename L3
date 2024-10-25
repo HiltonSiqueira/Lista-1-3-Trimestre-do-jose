@@ -1,5 +1,5 @@
-let a = 10;
-let b = 5;
+let a = parseInt(prompt("Digite o valor de a:"));
+let b = parseInt(prompt("Digite o valor de b:"));
 
 if (a % b === 0 || b % a === 0) {
     console.log("São múltiplos");
