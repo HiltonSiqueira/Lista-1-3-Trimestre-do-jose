@@ -1,28 +1,40 @@
+let nota1 = parseFloat(prompt("Digite a nota 1:"));
+let nota2 = parseFloat(prompt("Digite a nota 2:"));
+let nota3 = parseFloat(prompt("Digite a nota 3:"));
 
-let nota1 = 7
-let nota2 = 5
-let nota3 = 8
+let maiorNota = nota1;
 
-let maiorNota = Math.max(nota1, nota2, nota3)
-let somaPesos = 0
-let somaNotas = 0
+if (nota2 > maiorNota) {
+    maiorNota = nota2;
+}
+if (nota3 > maiorNota) {
+    maiorNota = nota3;
+}
+
+let somaNotas = 0;
 
 if (maiorNota === nota1) {
     somaNotas = nota1 * 4 + nota2 * 3 + nota3 * 3;
-} else if (maiorNota === nota2) {
+}
+
+if (maiorNota === nota2) {
     somaNotas = nota2 * 4 + nota1 * 3 + nota3 * 3;
-} else {
+}
+
+if (maiorNota === nota3) {
     somaNotas = nota3 * 4 + nota1 * 3 + nota2 * 3;
 }
 
-somaPesos = 4 + 3 + 3;let media = somaNotas / somaPesos
-
+let somaPesos = 4 + 3 + 3;
+let media = somaNotas / somaPesos;
 
 console.log("Notas:", nota1, nota2, nota3);
 console.log("Média:", media.toFixed(2));
 
 if (media >= 5) {
     console.log("APROVADO");
-} else {
+}
+
+if (media < 5) {
     console.log("REPROVADO");
 }
