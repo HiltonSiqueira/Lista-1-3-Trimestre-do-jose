@@ -1,3 +1,9 @@
+console.log("Código\tProduto\t\tPreço");
+console.log("ABCD\tProduto A\tR$ 5.30");
+console.log("XYPK\tProduto B\tR$ 6.00");
+console.log("KLMP\tProduto C\tR$ 3.20");
+console.log("QRST\tProduto D\tR$ 2.50");
+
 let preco = {
     'ABCD': 5.30,
     'XYPK': 6.00,
@@ -5,15 +11,15 @@ let preco = {
     'QRST': 2.50
 };
 
-let codigoProduto = prompt("Digite o código do produto:");
+let codigoProduto = prompt("Digite o código do produto (veja a lista acima):");
 let quantidade = parseInt(prompt("Digite a quantidade comprada:"));
 let total = 0;
 
 if (preco[codigoProduto]) {
     total = preco[codigoProduto] * quantidade;
     alert("Preço total: R$ " + total.toFixed(2));
-} else {
+}
+
+if (!preco[codigoProduto]) {
     alert("Código do produto inválido.");
 }
-5
-
