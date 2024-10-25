@@ -1,3 +1,5 @@
+console.log("Cardápio:\nCachorro Quente (código 100): R$ 1.20\nBauru Simples (código 101): R$ 1.30\nBauru com Ovo (código 102): R$ 1.50\nHamburguer (código 103): R$ 1.20\nCheeseburguer (código 104): R$ 1.30\nRefrigerante (código 105): R$ 1.00");
+
 let preco = {
     100: 1.20,
     101: 1.30,
@@ -7,16 +9,15 @@ let preco = {
     105: 1.00
 };
 
-let codigoItem = prompt("Digite o código do item pedido:");
-let quantidade = prompt("Digite a quantidade:");
-codigoItem = parseInt(codigoItem);
-quantidade = parseInt(quantidade);
+let codigoItem = parseInt(prompt("Digite o código do item pedido:"));
+let quantidade = parseInt(prompt("Digite a quantidade:"));
 let valorTotal = 0;
 
 if (preco[codigoItem]) {
     valorTotal = preco[codigoItem] * quantidade;
     alert("O valor total a ser pago é: R$ " + valorTotal.toFixed(2));
-} else {
+}
+
+if (!preco[codigoItem]) {
     alert("Código do item inválido.");
 }
-22
